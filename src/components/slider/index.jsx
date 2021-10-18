@@ -44,7 +44,9 @@ export default function Slider() {
     return (
         <div>
             <div className="options">
-                
+                <button>sliderShow</button>
+                <input type="number" placeholder="deley" />
+                <button>fullScreen</button>
             </div>
             <div className="display">
                 <button onClick={prevSlide}>Prev</button>
