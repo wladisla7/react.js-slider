@@ -1,3 +1,6 @@
+import './style.module.scss';
+
+
 export default function FullScreen() {
 
     function getFullScreen() {
