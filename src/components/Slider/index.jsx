@@ -40,7 +40,6 @@ export default function Slider(props) {
         <div>
             <div className="options">
                 <SliderShow action={nextSlide} />
-                <input type="number" placeholder="Deley for SliderShow" />
                 <button>FullScreen</button>
             </div>
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 export default function SliderShow(props) {
     const [interval, setIntervalID] = useState(null);
-    // const [deley, setDeley] = useState(null);
+    const [deley, setDelay] = useState(1);
 
     function SliderShowChange() {
 
@@ -14,8 +14,9 @@ export default function SliderShow(props) {
         }
     }
 
+
     const startChange = () => {
-        let idInterval = setInterval(props.action, 3000);
+        let idInterval = setInterval (props.action, deley * 1000)
         setIntervalID(idInterval);
     };
 
@@ -24,10 +25,10 @@ export default function SliderShow(props) {
     }
 
 
-    // const deleyChange = (value) => {
-    //     let idDeley = setIntervalID(value)
-    //     setDeley(idDeley)
-    // }
+    const handleChange = (event) => {
+        setDelay(Number(event.target.value))
+
+    }
 
     useEffect(() => {
         startChange()
@@ -47,6 +48,7 @@ export default function SliderShow(props) {
     return (
         <div>
             <button onClick={SliderShowChange}>{buttonText}</button>
+            <input type="number" name="deley" onChange={handleChange} value={deley} placeholder="Deley for SliderShow" />
         </div>
     )
 }
