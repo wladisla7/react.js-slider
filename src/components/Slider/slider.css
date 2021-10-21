@@ -12,7 +12,7 @@
     margin: auto;
     padding:1%;
     border:3px solid white;
-    max-width: 500px;
+    max-width: 700px;
 }
 .prevSlide:active,
 .nextSlide:active {
