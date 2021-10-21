@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './slidershow.css'
 
 export default function SliderShow(props) {
     const [interval, setIntervalID] = useState(null);
@@ -14,9 +15,8 @@ export default function SliderShow(props) {
         }
     }
 
-
     const startChange = () => {
-        let idInterval = setInterval (props.action, deley * 1000)
+        let idInterval = setInterval(props.action, deley * 1000)
         setIntervalID(idInterval);
     };
 
@@ -43,12 +43,12 @@ export default function SliderShow(props) {
         buttonText = "Start Slider"
     }
 
-    console.log(buttonText)
 
     return (
         <div>
             <button onClick={SliderShowChange}>{buttonText}</button>
-            <input type="number" name="deley" onChange={handleChange} value={deley} placeholder="Deley for SliderShow" />
+            <label className="delay">Deley: seconds </label>
+            <input type="number" name="deley" onChange={handleChange} value={deley} />
         </div>
     )
 }
