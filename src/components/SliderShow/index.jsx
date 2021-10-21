@@ -47,13 +47,12 @@ export default function SliderShow(props) {
     return (
         <div>
             <button onClick={SliderShowChange}>{buttonText}</button>
-            <label className="delay">Deley: seconds </label>
+            <label className="delay">Stop for Change Deley: seconds </label>
             <input type="number" name="deley" onChange={handleChange} value={deley} />
+             
         </div>
     )
 }
 
 
-
-// (Текст в переменой или старт или стоп, взавсимисоти от переменной interval)
 
