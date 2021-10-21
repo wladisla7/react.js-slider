@@ -14,3 +14,15 @@
     border:3px solid white;
     max-width: 700px;
 }
+
+.prevSlide,.nextSlide{
+    background:black;
+    color:white;
+    outline:black;
+    border-radius: 40%;
+    -webkit-border-radius: 40%;
+    -moz-border-radius: 40%;
+    -ms-border-radius: 40%;
+    -o-border-radius: 40%;
+    font-size:16px;
+}

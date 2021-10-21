@@ -42,9 +42,9 @@ export default function Slider(props) {
                 <FullScreen />
             </div>
             <div className="display">
-                <button className="prevSlide" onClick={prevSlide}> {'<<'} </button>
+                <button className="prevSlide" onClick={prevSlide}> {'<<<'} </button>
                 <img src={arrayImages[currentSlide]} alt="Slider" />
-                <button className="nextSlide" onClick={nextSlide}>{'>>'}</button>
+                <button className="nextSlide" onClick={nextSlide}>{'>>>'}</button>
             </div>
         </div>
     );

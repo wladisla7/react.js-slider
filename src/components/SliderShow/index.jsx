@@ -3,7 +3,7 @@ import './slidershow.css'
 
 export default function SliderShow(props) {
     const [interval, setIntervalID] = useState(null);
-    const [deley, setDelay] = useState(1);
+    const [deley, setDelay] = useState(5);
 
     function SliderShowChange() {
 
@@ -38,9 +38,9 @@ export default function SliderShow(props) {
     }, []);
 
 
-    let buttonText = "Stop Slider"
+    let buttonText = "Stop SliderShow"
     if (interval === null) {
-        buttonText = "Start Slider"
+        buttonText = "Start SliderShow"
     }
 
 
