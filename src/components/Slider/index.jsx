@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './slider.css'
 import SliderShow from '../../components/SliderShow'
+import FullScreen from '../../components/FullScreen'
 import firstimg from '../../assets/images/11.png';
 import secondimg from '../../assets/images/12.png';
 import thirdimg from '../../assets/images/13.png';
@@ -29,10 +30,8 @@ export default function Slider(props) {
 
     function prevSlide() {
         setCurrentSlide((prevSlide) => {
-            if (prevSlide === 0) {
-                return prevSlide--
-            }
-            // цикличность
+            return (prevSlide - 1 + arrayImages.length) % arrayImages.length;
+
         });
     }
 
@@ -40,9 +39,8 @@ export default function Slider(props) {
         <div>
             <div className="options">
                 <SliderShow action={nextSlide} />
-                <button>FullScreen</button>
+                <FullScreen />
             </div>
-
             <div className="display">
                 <button className="prevSlide" onClick={prevSlide}> {'<<'} </button>
                 <img src={arrayImages[currentSlide]} alt="Slider" />
