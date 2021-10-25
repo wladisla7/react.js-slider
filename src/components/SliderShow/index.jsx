@@ -10,6 +10,7 @@ export default function SliderShow(props) {
         if (interval === null) {
             startChange()
         } else {
+        
             stopChange()
             setIntervalID(null)
         }
@@ -29,11 +30,11 @@ export default function SliderShow(props) {
         setDelay(Number(event.target.value))
 
     }
-
+  
     useEffect(() => {
-        startChange()
+        stopChange()
         return () => {
-            stopChange()
+            startChange()
         };
     }, []);
 
@@ -49,7 +50,7 @@ export default function SliderShow(props) {
             <button onClick={SliderShowChange}>{buttonText}</button>
             <label className="delay">Stop for Change Deley: seconds </label>
             <input type="number" name="deley" onChange={handleChange} value={deley} />
-             
+
         </div>
     )
 }
