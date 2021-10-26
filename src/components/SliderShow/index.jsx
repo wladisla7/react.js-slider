@@ -11,7 +11,7 @@ export default function SliderShow(props) {
             startChange()
         } else {
             stopChange()
-            setIntervalID(null)
+
         }
     }
 
@@ -22,6 +22,7 @@ export default function SliderShow(props) {
 
     const stopChange = () => {
         clearInterval(interval)
+        setIntervalID(null)
     }
 
 
@@ -32,10 +33,10 @@ export default function SliderShow(props) {
     }
 
 
- 
+
 
     useEffect(() => {
-      
+
         return () => {
             stopChange()
         };
