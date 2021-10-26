@@ -10,7 +10,6 @@ export default function SliderShow(props) {
         if (interval === null) {
             startChange()
         } else {
-        
             stopChange()
             setIntervalID(null)
         }
@@ -28,13 +27,17 @@ export default function SliderShow(props) {
 
     const handleChange = (event) => {
         setDelay(Number(event.target.value))
-
+        stopChange();
+        startChange();
     }
-  
+
+
+ 
+
     useEffect(() => {
-        stopChange()
+      
         return () => {
-            startChange()
+            stopChange()
         };
     }, []);
 
